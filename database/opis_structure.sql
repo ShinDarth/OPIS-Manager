@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `schede` (
     `motivo_nf` TEXT,
     `sugg` TEXT,
     `sugg_nf` TEXT,
+    `id_cds` INT(11) NOT NULL,
     `id_insegnamento` INT(11),
     `id_modulo` VARCHAR(255),
     `canale` VARCHAR(255),
