@@ -360,7 +360,7 @@ function getDataForTeaching(id_cds, tab_position, dynamicSelect){
     canale = $("#dynamicSelect option:selected").attr("data-canale");    
     if (canale == undefined || canale == "") canale = "no";
     //ti prendi la option selezionata prendi i valori nel data- della option e lanci la richiesta get
-    $.getJSON(api_url + "schedeInsegnamento?id_ins="+id_ins+"&canale="+canale, function (data){
+    $.getJSON(api_url + "schede/insegnamento?id_ins="+id_ins+"&canale="+canale, function (data){
 
         var anni_accademici = [];
         for (i in data){

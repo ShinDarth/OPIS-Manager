@@ -10,11 +10,18 @@ export class EvaluationController {
   @Get()
   root(@Query('cds') course: number, @Query('anno_accademico') year): Promise<Evaluation[]> {
 
-    // don't stress the database if the query parameters are missing
     if (!course || !year) {
       return;
     }
-
     return this.evaluationService.findByCourseYear(course, year);
+  }
+
+  @Get('insegnamento')
+  findByTeachingChannel(@Query('id_ins') teaching: number, @Query('canale') channel): Promise<Evaluation[]> {
+    if (!teaching || !channel) {
+      return;
+    }
+
+    return this.evaluationService.findByTeachingChannel(teaching, channel);
   }
 }
