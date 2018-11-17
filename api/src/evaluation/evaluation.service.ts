@@ -12,7 +12,9 @@ export class EvaluationService {
   ) {}
 
   async findByCourseYear(course: number, year: string): Promise<Evaluation[]> {
-    // TODO
-    return await this.evaluationRepository.find({ where: { anno_accademico: year } });
+    return await this.evaluationRepository.find({ where: {
+        id_cds: course,
+        anno_accademico: year,
+      } });
   }
 }

@@ -65,6 +65,9 @@ export class Evaluation {
   @Column({ name: 'id_modulo', type: 'varchar', length: 255 })
   id_modulo: string;
 
+  @Column({ name: 'id_cds', type: 'int', width: 11 })
+  id_cds: string;
+
   @Column({ name: 'canale', type: 'varchar', length: 255 })
   canale: string;
 
