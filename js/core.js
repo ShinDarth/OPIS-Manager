@@ -3,7 +3,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-const api_url = "API/public/index.php/api/";
+const api_url = "http://localhost:3000/";
 
 
 var normalize = false;
