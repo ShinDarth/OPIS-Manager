@@ -23,6 +23,6 @@ export class Course {
   @Column({ name: 'tot_schedeNF', type: 'int', width: 11 })
   tot_schedeNF: number;
 
-  @Column({ name: 'tot_schedeNF', type: 'int', width: 11 })
+  @Column({ name: 'id_dipartimento', type: 'int', width: 11 })
   id_dipartimento: number;
 }
