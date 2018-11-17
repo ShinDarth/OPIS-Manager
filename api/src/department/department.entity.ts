@@ -6,7 +6,7 @@ export class Department {
   id: number;
 
   @Column({ name: 'nome', type: 'varchar', length: 255 })
-  name: string;
+  nome: string;
 
   @Column({ name: 'tot_cds', type: 'int', width: 11 })
   tot_cds: number;
