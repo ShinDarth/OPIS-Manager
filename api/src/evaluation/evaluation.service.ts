@@ -15,12 +15,13 @@ export class EvaluationService {
     // convert format "1718" to format "2017/2018"
     year = `20${year.substr(0, 2)}/20${year.substr(2, 4)}`;
 
-    return await this.evaluationRepository.find({
-      where: {
+    return await this.evaluationRepository.createQueryBuilder()
+      .innerJoinAndSelect('insegnamento', 'insegnamento', 'id_insegnamento = insegnamento.id')
+      .where({
         id_cds: course,
         anno_accademico: year,
-      },
-    });
+      })
+      .getMany();
   }
 
   async findByTeachingChannel(teaching: number, channel: string): Promise<Evaluation[]> {
