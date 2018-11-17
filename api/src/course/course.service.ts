@@ -11,7 +11,7 @@ export class CourseService {
     private readonly courseRepository: Repository<Course>,
   ) {}
 
-  async findAll(): Promise<Course[]> {
-    return await this.courseRepository.find();
+  async findByDepartment(id: number): Promise<Course[]> {
+    return await this.courseRepository.find({ where: { id_dipartimento: id} });
   }
 }

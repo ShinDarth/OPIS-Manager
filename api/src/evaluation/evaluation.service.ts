@@ -11,7 +11,8 @@ export class EvaluationService {
     private readonly evaluationRepository: Repository<Evaluation>,
   ) {}
 
-  async findAll(): Promise<Evaluation[]> {
-    return await this.evaluationRepository.find();
+  async findByCourseYear(course: number, year: string): Promise<Evaluation[]> {
+    // TODO
+    return await this.evaluationRepository.find({ where: { anno_accademico: year } });
   }
 }

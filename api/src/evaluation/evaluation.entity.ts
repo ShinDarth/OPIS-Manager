@@ -70,5 +70,4 @@ export class Evaluation {
 
   @Column({ name: 'anno_accademico', type: 'varchar', length: 9 })
   anno_accademico: string;
-
 }

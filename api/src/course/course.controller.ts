@@ -1,4 +1,4 @@
-import { Get, Controller } from '@nestjs/common';
+import { Get, Controller, Param } from '@nestjs/common';
 
 import { CourseService } from './course.service';
 import { Course } from './course.entity';
@@ -7,8 +7,8 @@ import { Course } from './course.entity';
 export class CourseController {
   constructor(private readonly courseService: CourseService) {}
 
-  @Get()
-  root(): Promise<Course[]> {
-    return this.courseService.findAll();
+  @Get(':id')
+  findByDepartment(@Param('id') id): Promise<Course[]> {
+    return this.courseService.findByDepartment(id);
   }
 }
