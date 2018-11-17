@@ -8,7 +8,7 @@ export class TeachingController {
   constructor(private readonly teachingService: TeachingService) {}
 
   @Get(':id')
-  findOne(@Param('id') id): Promise<Teaching> {
-    return this.teachingService.findOne(id);
+  findOne(@Param('id') id): Promise<Teaching[]> {
+    return this.teachingService.findByCourse(id);
   }
 }

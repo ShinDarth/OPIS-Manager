@@ -11,7 +11,7 @@ export class TeachingService {
     private readonly teachingRepository: Repository<Teaching>,
   ) {}
 
-  async findOne(id: number): Promise<Teaching> {
-    return await this.teachingRepository.findOne(id);
+  async findByCourse(id: number): Promise<Teaching[]> {
+    return await this.teachingRepository.find({ where: { id_cds: id } });
   }
 }
