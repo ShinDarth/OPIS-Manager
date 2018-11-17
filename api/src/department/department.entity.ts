@@ -9,17 +9,17 @@ export class Department {
   name: string;
 
   @Column({ name: 'tot_cds', type: 'int', width: 11 })
-  totCds: number;
+  tot_cds: number;
 
   @Column({ name: 'tot_moduli', type: 'int', width: 11 })
-  totModuli: number;
+  tot_moduli: number;
 
   @Column({ name: 'tot_valutati', type: 'int', width: 11 })
-  totValutati: number;
+  tot_valutati: number;
 
   @Column({ name: 'tot_schedeF', type: 'int', width: 11 })
-  totSchedeF: number;
+  tot_schedeF: number;
 
   @Column({ name: 'tot_schedeNF', type: 'int', width: 11 })
-  totSchedeNF: number;
+  tot_schedeNF: number;
 }
